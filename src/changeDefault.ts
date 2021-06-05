@@ -1,7 +1,6 @@
 import commander from 'commander';
-import fs from 'fs';
-import path from 'path';
 import chalk from 'chalk';
+import Preferences from 'preferences';
 
 interface Lang {
 	code: string;
@@ -10,7 +9,7 @@ interface Lang {
 export default function changeDefaultLang(
 	args: commander.OptionValues,
 	langs: Lang[],
-	config: { defaultLang: string }
+	config: Preferences
 ) {
 	if (args.default === true) {
 		const current = langs.find(x => x.code === config.defaultLang);
@@ -25,10 +24,8 @@ export default function changeDefaultLang(
 		var newLang = langs.find(
 			x => x.code.toLowerCase() === args.default.toLowerCase()
 		);
-		fs.writeFileSync(
-			path.resolve(__dirname, '../config.json'),
-			`{"defaultLang": "${newLang?.code}"}`
-		);
+		config.defaultLang = newLang?.code;
+		config.save();
 		return console.log(
 			`Your new default language is ${chalk.cyan(
 				newLang?.lang

@@ -1,10 +1,12 @@
 import commander from 'commander';
 import chalk from 'chalk';
-import fs from 'fs';
-import path from 'path';
-
+import Preferences from 'preferences';
 import dict from './dict';
 import changeDefault from './changeDefault';
+
+var config = new Preferences('com.ahsan-a.termdict', {
+	defaultLang: 'en_GB',
+});
 
 const langs = [
 	{ code: 'en_GB', lang: 'English (UK)' },
@@ -46,20 +48,6 @@ export interface DefinitionsEntity {
 	definition: string;
 	synonyms?: string[] | null;
 	example?: string | null;
-}
-
-try {
-	var config = JSON.parse(
-		fs.readFileSync(path.resolve(__dirname, '../config.json'), 'utf8')
-	);
-} catch {
-	fs.writeFileSync(
-		path.resolve(__dirname, '../config.json'),
-		'{"defaultLang": "en_GB"}'
-	);
-	var config = JSON.parse(
-		fs.readFileSync(path.resolve(__dirname, '../config.json'), 'utf8')
-	);
 }
 
 export default async function handle(

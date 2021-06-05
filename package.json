@@ -1,6 +1,6 @@
 {
 	"name": "termdict",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"description": "Command line dictionary",
 	"main": "./bin/index.js",
 	"bin": {
@@ -24,18 +24,20 @@
 		"chalk": "^4.1.1",
 		"commander": "^7.2.0",
 		"node-fetch": "^2.6.1",
-		"path": "^0.12.7"
+		"path": "^0.12.7",
+		"preferences": "^2.0.2"
 	},
 	"devDependencies": {
+		"@types/configstore": "^5.0.0",
 		"@types/node": "^15.12.1",
 		"@types/node-fetch": "^2.5.10"
 	},
 	"keywords": [
-	"dict",
-	"dictionary",
-	"english",
-	"cli",
-	"international",
-	"definition"
+		"dict",
+		"dictionary",
+		"english",
+		"cli",
+		"international",
+		"definition"
 	]
 }
