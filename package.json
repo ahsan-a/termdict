@@ -1,0 +1,41 @@
+{
+	"name": "cmdict",
+	"version": "0.0.1",
+	"description": "Command line dictionary",
+	"main": "./bin/index.js",
+	"bin": {
+		"dict": "bin/index.js"
+	},
+	"scripts": {
+		"build": "tsc -p .",
+		"test": "npm run build && node ."
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ahsan-a/cmdict.git"
+	},
+	"author": "ahsan-a",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ahsan-a/cmdict/issues"
+	},
+	"homepage": "https://github.com/ahsan-a/cmdict#readme",
+	"dependencies": {
+		"chalk": "^4.1.1",
+		"commander": "^7.2.0",
+		"node-fetch": "^2.6.1",
+		"path": "^0.12.7"
+	},
+	"devDependencies": {
+		"@types/node": "^15.12.1",
+		"@types/node-fetch": "^2.5.10"
+	},
+	"keywords": [
+	"dict",
+	"dictionary",
+	"english",
+	"cli",
+	"international",
+	"definition"
+	]
+}
