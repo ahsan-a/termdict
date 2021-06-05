@@ -1,5 +1,5 @@
 {
-	"name": "cmdict",
+	"name": "termdict",
 	"version": "0.0.1",
 	"description": "Command line dictionary",
 	"main": "./bin/index.js",
@@ -12,14 +12,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/ahsan-a/cmdict.git"
+		"url": "git+https://github.com/ahsan-a/termdict.git"
 	},
 	"author": "ahsan-a",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/ahsan-a/cmdict/issues"
+		"url": "https://github.com/ahsan-a/termdict/issues"
 	},
-	"homepage": "https://github.com/ahsan-a/cmdict#readme",
+	"homepage": "https://github.com/ahsan-a/termdict#readme",
 	"dependencies": {
 		"chalk": "^4.1.1",
 		"commander": "^7.2.0",
