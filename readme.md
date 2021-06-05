@@ -21,7 +21,9 @@ Or alternatively:
 #### Choose a default language
 
 The current default is `en_GB`.
-dict --default en_us
+
+    dict --default en_us
 
 or alternatively:
-dict -d en_us
+
+    dict -d en_us
