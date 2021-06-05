@@ -5,7 +5,7 @@ import handler from './handler';
 const program = new Command();
 
 program
-	.version('0.0.1')
+	.version('1.0.0')
 	.arguments('[word]')
 	.description('A CLI Dictionary', {
 		word: 'the word you would like to look up',
